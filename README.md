@@ -1,7 +1,9 @@
 # CYD Authenticator
 
 CYD Authenticator is an ESP32-based authenticator and secret vault UI built for a 240x320 touchscreen device. It provides TOTP account management, a PIN lock screen, and an encrypted vault for storing secrets in flash.
+## Demo
 
+https://github.com/user-attachments/assets/5cb7061f-26e5-4bed-af7c-6cdc561d7bb5
 ## Features
 
 - PIN lock screen with stored PIN verification
@@ -83,13 +85,6 @@ The app does not keep a hardcoded secret key in the source code. Instead, it gen
 Account secrets and vault secrets are encrypted before being written to flash, and decrypted only after loading them back into memory. The PIN itself is stored separately as a salted hash, not as plain text.
 
 To make brute-force attacks harder, the PIN flow uses retry limits with increasing lockout delays and a daily failure cap.
-
-## Demo
-
-<video width="320" height="240" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Project Structure
 
