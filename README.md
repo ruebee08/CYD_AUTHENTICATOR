@@ -28,6 +28,11 @@ This project is configured for:
 - PlatformIO extension
 - ESP32 device connected over USB
 
+## Wi-Fi Setup
+
+- Open `include/AppConfig.h` and set `WIFI_SSID` and `WIFI_PASSWORD` to your own network values.
+- Use a 2.4 GHz Wi-Fi network (ESP32 does not support 5 GHz Wi-Fi).
+
 ## Build and Upload
 
 From the project root:
@@ -76,6 +81,8 @@ After the PIN is set, unlock the device first if it is PIN-protected, then use t
 The app does not keep a hardcoded secret key in the source code. Instead, it generates a persistent storage master key on first boot and saves it in flash so the device can read its own encrypted data after reboot.
 
 Account secrets and vault secrets are encrypted before being written to flash, and decrypted only after loading them back into memory. The PIN itself is stored separately as a salted hash, not as plain text.
+
+To make brute-force attacks harder, the PIN flow uses retry limits with increasing lockout delays and a daily failure cap.
 
 ## Demo
 

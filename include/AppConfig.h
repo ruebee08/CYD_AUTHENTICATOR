@@ -17,9 +17,9 @@ constexpr uint32_t TOTP_PERIOD_MS = 30000;
 constexpr uint32_t TAP_DEBOUNCE_MS = 140;
 
 // Wi-Fi + NTP settings used for accurate TOTP time.
-// Fill SSID/PASSWORD with your network values.
-constexpr const char* WIFI_SSID = "Galaxy A03s215a";
-constexpr const char* WIFI_PASSWORD = "googoodol";
+// Fill SSID/PASSWORD with your network values (use a 2.4 GHz Wi-Fi network).
+constexpr const char* WIFI_SSID = "YOUR_WIFI_SSID";
+constexpr const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
 constexpr const char* NTP_SERVER_PRIMARY = "time.google.com";
 constexpr const char* NTP_SERVER_SECONDARY = "time.cloudflare.com";
 constexpr uint32_t WIFI_CONNECT_TIMEOUT_MS = 15000;
