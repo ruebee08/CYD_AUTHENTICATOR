@@ -79,6 +79,7 @@ The app does not keep a hardcoded secret key in the source code. Instead, it gen
 
 Account secrets and vault secrets are encrypted before being written to flash, and decrypted only after loading them back into memory. The PIN itself is stored separately as a salted hash, not as plain text.
 
+To make brute-force attacks harder, the PIN flow uses retry limits with increasing lockout delays and a daily failure cap.
 
 ## Project Structure
 
