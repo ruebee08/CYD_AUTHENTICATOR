@@ -79,10 +79,7 @@ Account secrets and vault secrets are encrypted before being written to flash, a
 
 ## Demo
 
-<video width="320" height="240" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/5cb7061f-26e5-4bed-af7c-6cdc561d7bb5
 
 ## Project Structure
 
